@@ -1,0 +1,115 @@
+figure{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .fdiv{
+        width: 100%;
+        min-height: 1500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+        .fd1{
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            justify-content: space-between;
+            .fd11{
+                width: 45%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1{
+                    font-size: 44px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                a{
+                    width: 40%;
+                    height: 50px;
+                    padding: 15px;
+                    background-color: $col3;
+                    text-align: center;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    &:hover{
+                        background-color: $col2;
+                    }
+                }
+            }
+            .fd12{
+                width: 45%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .fd2{
+            width: 100%;
+            min-height: 250px;
+            background-color: $col3;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            padding: 30px;
+            div{
+                width: 32%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                color: white;
+                i{
+                    font-size: 44px;
+                }
+                h3{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    figure{
+        .fdiv{
+            .fd2{
+                div{
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    figure{
+        .fdiv{
+            .fd1{
+                flex-direction: column;
+                .fd11{
+                    width: 98%;
+                }
+                .fd12{
+                    width: 98%;
+                }
+            }
+            .fd2{
+                flex-direction: column;
+                div{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.video{
+    background-image: url('	https://preview.colorlib.com/theme/timezone/assets/img/gallery//sectin_bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    .vd{
+        position: absolute;
+        width: 30%;
+        height: 150px;
+        background-color: $col3;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        h2{
+            color: white;
+            font-size: 28px;
+        }
+        a{
+            font-size: 24px;
+            color: white;
+        }
+    }
+    .play{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 999999px;
+        border: 2px solid white;
+        left: calc(50% - 70px);
+        top: calc(50% - 70px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            font-size: 36px;
+            color: white;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .video{
+        .vd{
+            width: 50%;
+            height: 15%;
+        }
+    }
+}
+@media screen and (max-width: 426px) {
+    .video{
+        .vd{
+            width: 70%;
+            height: 15%;
+        }
+    }
+}

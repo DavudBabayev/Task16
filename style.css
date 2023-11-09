@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.con {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0px 32px;
+}
+
+nav {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 2px 14px 19px -3px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 2px 14px 19px -3px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 2px 14px 19px -3px rgba(0, 0, 0, 0.69);
+}
+nav .ndiv {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .ndiv a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #343a40;
+}
+nav .ndiv .nd1 {
+  width: 50%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .ndiv .nd1 a {
+  font-size: 20px;
+}
+nav .ndiv .nd1 a:hover {
+  color: #ff2020;
+}
+nav .ndiv .nd2 {
+  width: 10%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .ndiv .nd2 a {
+  font-size: 26px;
+}
+nav .ndiv .nd2 a:hover {
+  color: #ff2020;
+}
+nav .ndiv .nd3 {
+  display: none;
+  width: 20%;
+  height: 35%;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  nav .ndiv .nd1 {
+    display: none;
+  }
+  nav .ndiv .nd3 {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  nav .ndiv .nd1 {
+    display: none;
+  }
+  nav .ndiv .nd2 {
+    display: none;
+  }
+  nav .ndiv .nd3 {
+    display: block;
+  }
+}
+main {
+  width: 100%;
+  background-color: #f8f9fa;
+}
+main .mdiv {
+  width: 100%;
+  max-height: 1050px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .mdiv .md1 {
+  width: 45%;
+  height: 930px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+main .mdiv .md1 h1 {
+  font-size: 60px;
+}
+main .mdiv .md1 p {
+  font-size: 20px;
+}
+main .mdiv .md1 a {
+  width: 150px;
+  height: 40px;
+  background-color: #343a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+main .mdiv .md1 a:hover {
+  background-color: #ff2020;
+}
+main .mdiv .md2 {
+  width: 45%;
+  height: 850px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+main .mdiv .md2 img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: zoom 2s infinite alternate;
+}
+@keyframes zoom {
+  to {
+    transform: scale(1.03);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  main .mdiv .md1 {
+    width: 100%;
+    height: 500px;
+  }
+  main .mdiv .md1 h1 {
+    font-size: 30px;
+  }
+  main .mdiv .md2 {
+    display: none;
+  }
+}
+header {
+  width: 100%;
+}
+header .hdiv {
+  width: 100%;
+  min-height: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .hdiv h1 {
+  font-size: 40px;
+}
+header .hdiv .hd {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header .hdiv .hd div {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+header .hdiv .hd div img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s ease;
+}
+header .hdiv .hd div:hover img {
+  transform: scale(1.05);
+}
+header .hdiv .hd div a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #343a40;
+}
+header .hdiv .hd div p {
+  font-size: 18px;
+  color: #ff2020;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  header .hdiv .hd div {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 426px) {
+  header .hdiv .hd div {
+    width: 98%;
+  }
+}
+.grid {
+  width: 100%;
+  min-height: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+}
+.grid div {
+  overflow: hidden;
+}
+.grid div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 1s ease;
+}
+.grid div:hover img {
+  transform: scale(0.98);
+}
+.grid .gr1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.grid .gr2 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.grid .gr3 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.grid .gr4 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .grid {
+    grid-template-columns: repeat(2, auto);
+  }
+  .grid .gr1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+  .grid .gr2 {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+  .grid .gr3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .grid .gr4 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 425px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+  .grid .gr1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+  .grid .gr2 {
+    grid-row: 3/5;
+    grid-column: 1/2;
+  }
+  .grid .gr3 {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+  .grid .gr4 {
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+}
+section {
+  width: 100%;
+  padding-bottom: 30px;
+}
+section .sdiv {
+  width: 100%;
+  min-height: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section .sdiv .sd1 {
+  width: 50%;
+  height: 200px;
+  text-align: center;
+}
+section .sdiv .sd1 h1 {
+  font-size: 50px;
+}
+section .sdiv .sd2 {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+section .sdiv .sd2 div {
+  width: 32%;
+  height: 380px;
+  text-align: center;
+}
+section .sdiv .sd2 div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+section .sdiv .sd2 div a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 20px;
+}
+section .sdiv .aaa {
+  margin-top: 70px;
+  width: 20%;
+  height: 40px;
+  background-color: #ff2020;
+  text-align: center;
+}
+section .sdiv .aaa a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+section .sdiv .aaa:hover {
+  background-color: #343a40;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  section .sdiv .sd1 {
+    width: 80%;
+  }
+  section .sdiv .sd2 div {
+    width: 45%;
+  }
+  section .sdiv .aaa {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  section .sdiv .sd1 {
+    width: 98%;
+  }
+  section .sdiv .sd2 div {
+    width: 98%;
+  }
+  section .sdiv .aaa {
+    width: 98%;
+  }
+}
+.video {
+  background-image: url("	https://preview.colorlib.com/theme/timezone/assets/img/gallery//sectin_bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+}
+.video .vd {
+  position: absolute;
+  width: 30%;
+  height: 150px;
+  background-color: #ff2020;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.video .vd h2 {
+  color: white;
+  font-size: 28px;
+}
+.video .vd a {
+  font-size: 24px;
+  color: white;
+}
+.video .play {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 999999px;
+  border: 2px solid white;
+  left: calc(50% - 70px);
+  top: calc(50% - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video .play a {
+  font-size: 36px;
+  color: white;
+}
+.video .play:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .video .vd {
+    width: 50%;
+    height: 15%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .video .vd {
+    width: 70%;
+    height: 15%;
+  }
+}
+figure {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+figure .fdiv {
+  width: 100%;
+  min-height: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+figure .fdiv .fd1 {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+figure .fdiv .fd1 .fd11 {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+figure .fdiv .fd1 .fd11 h1 {
+  font-size: 44px;
+}
+figure .fdiv .fd1 .fd11 p {
+  font-size: 18px;
+}
+figure .fdiv .fd1 .fd11 a {
+  width: 40%;
+  height: 50px;
+  padding: 15px;
+  background-color: #ff2020;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+figure .fdiv .fd1 .fd11 a:hover {
+  background-color: #343a40;
+}
+figure .fdiv .fd1 .fd12 {
+  width: 45%;
+  height: 100%;
+}
+figure .fdiv .fd1 .fd12 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+figure .fdiv .fd2 {
+  width: 100%;
+  min-height: 250px;
+  background-color: #ff2020;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 30px;
+}
+figure .fdiv .fd2 div {
+  width: 32%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+figure .fdiv .fd2 div i {
+  font-size: 44px;
+}
+figure .fdiv .fd2 div h3 {
+  font-size: 22px;
+}
+figure .fdiv .fd2 div p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  figure .fdiv .fd2 div {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 426px) {
+  figure .fdiv .fd1 {
+    flex-direction: column;
+  }
+  figure .fdiv .fd1 .fd11 {
+    width: 98%;
+  }
+  figure .fdiv .fd1 .fd12 {
+    width: 98%;
+  }
+  figure .fdiv .fd2 {
+    flex-direction: column;
+  }
+  figure .fdiv .fd2 div {
+    width: 100%;
+  }
+}
+footer {
+  width: 100%;
+}
+footer .fodiv {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer .fodiv .fod1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+footer .fodiv .fod1 div {
+  width: 23%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer .fodiv .fod1 div a {
+  text-decoration: none;
+  color: gray;
+}
+footer .fodiv .fod1 div a:hover {
+  color: #ff2020;
+}
+footer .fodiv .fod2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .fodiv .fod2 p i {
+  color: red;
+}
+footer .fodiv .fod2 p a {
+  text-decoration: none;
+  color: #ff2020;
+}
+footer .fodiv .fod2 ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+footer .fodiv .fod2 ul li {
+  transition: transform 1s ease;
+}
+footer .fodiv .fod2 ul li:hover {
+  color: #ff2020;
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  footer .fodiv .fod1 {
+    gap: 1%;
+  }
+  footer .fodiv .fod1 div {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 426px) {
+  footer .fodiv .fod1 div {
+    width: 98%;
+  }
+  footer .fodiv .fod2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

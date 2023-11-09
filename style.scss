@@ -1,0 +1,25 @@
+$col1: #f8f9fa;
+$col2: #343a40;
+$col3: #ff2020;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.con{
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 32px;
+}
+
+@import 'nav';
+@import 'main';
+@import 'header';
+@import 'grid';
+@import 'section';
+@import 'video';
+@import 'figure';
+@import 'footer';
